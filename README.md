@@ -4,10 +4,6 @@
 
 Api.ai Slack integration allows you to create Slack bots with natural language understanding based on Api.ai technology.
 
-Source code location: https://github.com/xVir/api-ai-slack-bot
-
-Docker image location: https://hub.docker.com/r/xvir/api-ai-slack-bot/
-
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 To launch a bot, you’ll need the Linux OS. To launch it in other operating systems, use [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
@@ -19,8 +15,8 @@ Api.ai documentation:
 
 You’ll need 3 keys:
 
-- client access token for Api.ai
-- subscription key for Api.ai
+- Client access token for Api.ai
+- Subscription key for Api.ai
 - Slack bot API token
 
 To obtain a Slack bot API token, create a new bot integration here: https://slack.com/apps/A0F7YS25R-bots.
@@ -36,17 +32,17 @@ docker run -d --name slack_bot \
            -e accesstoken="api.ai access key" \
            -e subscriptionkey="api.ai subscription key" \
            -e slackkey="slack bot key" \
-           xvir/api-ai-slack-bot
+           api-ai/api-ai-slack-bot
 ```
 
 **For interactive launch mode (-it parameter):**
 
 ```sh
 docker run -it --name slack_bot \
-           -e accesstoken="api.ai access key" \
-           -e subscriptionkey="api.ai subscription key" \
-           -e slackkey="slack bot key" \
-           xvir/api-ai-slack-bot
+           -e accesstoken="Api.ai client access key" \
+           -e subscriptionkey="Api.ai subscription key" \
+           -e slackkey="Slack bot user key" \
+           api-ai/api-ai-slack-bot
 ```
 
 To stop the bot from running in the interactive mode, press CTRL+C.
@@ -71,11 +67,11 @@ If you want to customize your bot behavior, follow the steps below.
 
 ```sh
 docker run -d --name slack_bot \
-           -e accesstoken="api.ai access key" \
-           -e subscriptionkey="api.ai subscription key" \
-           -e slackkey="slack bot key" \
+           -e accesstoken="Api.ai client token" \
+           -e subscriptionkey="Api.ai Subscription key" \
+           -e slackkey="Slack bot user key" \
            -v /full/path/to/your/src:/usr/app/src \
-           xvir/api-ai-slack-bot
+           api-ai/api-ai-slack-bot
 ```
 
 ## Code Notes
