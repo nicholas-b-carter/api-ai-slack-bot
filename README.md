@@ -13,10 +13,9 @@ Api.ai documentation:
 - [How to create an Api.ai agent](https://docs.api.ai/docs/get-started#step-1-create-agent)
 - [How to obtain Api.ai authentication keys](https://docs.api.ai/docs/authentication)
 
-You’ll need 3 keys:
+You’ll need 2 keys:
 
 - Client access token for Api.ai
-- Subscription key for Api.ai
 - Slack bot API token
 
 To obtain a Slack bot API token, create a new bot integration here: https://slack.com/apps/A0F7YS25R-bots.
@@ -30,9 +29,8 @@ To launch the bot, use one of the following commands:
 ```sh
 docker run -d --name slack_bot \
            -e accesstoken="api.ai access key" \
-           -e subscriptionkey="api.ai subscription key" \
            -e slackkey="slack bot key" \
-           api-ai/api-ai-slack-bot
+           speaktoit/api-ai-slack-bot
 ```
 
 **For interactive launch mode (-it parameter):**
@@ -40,9 +38,8 @@ docker run -d --name slack_bot \
 ```sh
 docker run -it --name slack_bot \
            -e accesstoken="Api.ai client access key" \
-           -e subscriptionkey="Api.ai subscription key" \
            -e slackkey="Slack bot user key" \
-           api-ai/api-ai-slack-bot
+           speaktoit/api-ai-slack-bot
 ```
 
 To stop the bot from running in the interactive mode, press CTRL+C.
@@ -68,10 +65,9 @@ If you want to customize your bot behavior, follow the steps below.
 ```sh
 docker run -d --name slack_bot \
            -e accesstoken="Api.ai client token" \
-           -e subscriptionkey="Api.ai Subscription key" \
            -e slackkey="Slack bot user key" \
            -v /full/path/to/your/src:/usr/app/src \
-           api-ai/api-ai-slack-bot
+           speaktoit/api-ai-slack-bot
 ```
 
 ## Code Notes
