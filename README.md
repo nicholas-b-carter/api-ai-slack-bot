@@ -56,7 +56,7 @@ where `slack_bot` is the container name from the `run` command.
 
 If you want to customize your bot behavior, follow the steps below.
 
-1. Clone the repository https://github.com/xVir/api-ai-slack-bot 
+1. Clone the repository https://github.com/api-ai/api-ai-slack-bot 
 
 2. Change the code to `index.js`
 
